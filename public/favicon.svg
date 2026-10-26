@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Painel Clima">
+  <rect width="64" height="64" rx="16" fill="#0f3d34" />
+  <circle cx="26" cy="25" r="9" fill="#f3c477" />
+  <g stroke="#f3c477" stroke-width="4" stroke-linecap="round">
+    <path d="M26 8v5M26 37v5M9 25h5M38 25h5M14 13l3.6 3.6M34.4 33.4L38 37M38 13l-3.6 3.6M17.6 33.4L14 37" />
+  </g>
+  <path d="M30 52h17a7 7 0 0 0 .6-14A10 10 0 0 0 29 41a6 6 0 0 0 1 11Z" fill="#f7f2e7" opacity=".92" />
+</svg>
