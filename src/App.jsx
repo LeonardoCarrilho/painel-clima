@@ -242,11 +242,11 @@ export default function App() {
 
       <main id="conteudo">
         <section className="wrap hero">
-          <p className="eyebrow">Open-Meteo · sem chave de API</p>
-          <h1>O clima da sua rotina em uma tela.</h1>
+          <p className="eyebrow">Seu dia, lá fora</p>
+          <h1>Um olhar para o céu. Um plano para o dia.</h1>
           <p className="hero-lead">
-            Temperatura agora, próximas 24 horas e sete dias de previsão — com favoritos,
-            Celsius ou Fahrenheit e um cache que segura a última consulta quando a internet cai.
+            Veja a temperatura agora e acompanhe as próximas horas. Salve suas cidades para
+            planejar a semana com a previsão sempre por perto.
           </p>
           {dados?.atualizadoEm ? (
             <p className="hero-meta">

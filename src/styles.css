@@ -1107,22 +1107,21 @@ code {
   }
 }
 
+/* Identidade visual e layouts responsivos. */
 
-/* Boletim meteorológico: panorama lateral e leitura por faixas. */
-:root { --radius: 10px; --radius-sm: 6px; --display: "Segoe UI Variable", "Segoe UI", sans-serif; }
-body { background: var(--bg); }
-.hero { border-bottom: 1px solid var(--line-strong); margin-bottom: 1.5rem; }
-.hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); max-width: 25ch; font-weight: 350; }
-.hero-lead { max-width: 75ch; }
-.card { box-shadow: none; }
-.current-card { border-radius: 10px; }
-.temperature { font-weight: 300; letter-spacing: -0.07em; }
-.forecast-table tbody tr:nth-child(even) { background: var(--surface-2); }
-@media (min-width: 1100px) {
- .stack { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); align-items: start; }
- .stack > * { grid-column: 1 / -1; }
- .stack > .current-card { grid-column: 1; height: 100%; }
- .stack > .hourly-card { grid-column: 2; height: 100%; }
- .current-main { flex-wrap: wrap; gap: 1rem; }
- .current-card .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+:root { color-scheme:light; --bg:#eef5fc; --bg-deep:#dceaf7; --surface:#fff; --surface-2:#f1f6fc; --ink:#18304e; --ink-soft:#4b6380; --ink-faint:#627995; --line:#d8e5f2; --line-strong:#b7cce2; --forest:#164a88; --forest-2:#2365ad; --moss:#245fa0; --moss-soft:#e4effc; --radius:24px; --display:'Segoe UI',system-ui,sans-serif; }
+body { background:var(--bg); }
+.site-header { background:#fff; border-bottom:1px solid var(--line); }
+.hero { padding-top:38px; padding-bottom:26px; }
+.hero h1 { font-size:clamp(2rem,4vw,3.2rem); font-weight:650; letter-spacing:-.05em; max-width:24ch; }
+.hero-lead { max-width:65ch; font-size:1rem; }
+.current-card { background:linear-gradient(125deg,#15457d,#2872bd); border:0; box-shadow:0 20px 40px -25px #164a88; }
+.current-main { padding-block:24px; }
+.temperature { letter-spacing:-.07em; }
+.card { box-shadow:none; }
+.stats { gap:12px; }
+.stats>div { border-radius:14px; background:#ffffff12; padding:14px; }
+.about { padding:30px; border:1px solid var(--line); border-radius:24px; background:#ffffff80; }
+@media(min-width:1100px) { .stack { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:stretch; gap:24px; } .stack>* { grid-column:1/-1; min-width:0; } .stack>.current-card { grid-column:1; } .stack>.hourly-card { grid-column:2; } }
+@media(max-width:600px) { .hero { padding-top:24px; } .about { padding:20px; } }
+
