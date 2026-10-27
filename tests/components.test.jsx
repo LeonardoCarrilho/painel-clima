@@ -34,6 +34,7 @@ describe("CurrentCard", () => {
     );
 
     assert.match(html, /80°/);
+    assert.match(html, /aria-label="80° Fahrenheit"/);
     assert.match(html, /aria-pressed="true"/);
     assert.match(html, /Salvo/);
     assert.match(html, /Remover São Paulo dos favoritos/);
@@ -157,3 +158,4 @@ describe("WeatherIcon", () => {
     assert.match(html, /aria-hidden="true"/);
   });
 });
+

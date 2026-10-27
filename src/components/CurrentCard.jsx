@@ -58,7 +58,7 @@ export default function CurrentCard({ dados, unidade, favorito, onFavoritar }) {
         <WeatherIcon codigo={atual.codigo} tamanho={116} className="current-icon" />
 
         <div className="current-temp">
-          <p className="temperature" aria-label={`${Math.round(atual.temperatura)} graus`}>
+          <p className="temperature" aria-label={`${formatarTemperatura(atual.temperatura, unidade)} ${unidade === "F" ? "Fahrenheit" : "Celsius"}`}>
             {formatarTemperatura(atual.temperatura, unidade)}
           </p>
           <p className="condition">{condicao.rotulo}</p>
