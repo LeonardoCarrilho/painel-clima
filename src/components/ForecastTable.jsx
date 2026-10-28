@@ -11,7 +11,7 @@ export default function ForecastTable({ diaria, unidade }) {
         </div>
       </div>
 
-      <div className="table-wrap">
+      <div className="table-wrap" role="region" aria-label="Previsão detalhada dos próximos sete dias" tabIndex={0}>
         <table className="forecast-table">
           <caption className="sr-only">
             Previsão dos próximos sete dias, com condição, temperatura mínima, máxima e chance de
