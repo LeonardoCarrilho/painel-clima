@@ -15,3 +15,10 @@ vite.config.js.timestamp-*
 coverage/
 playwright-report/
 test-results/
+.taste-skill/chrome*/
+.taste-skill/before-build/
+.taste-skill/*.png
+.taste-skill/shots/
+public/taste/moments/
+public/redesign.css
+public/taste/motion/demo.html

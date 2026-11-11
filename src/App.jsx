@@ -35,6 +35,8 @@ export default function App() {
   const [localizando, setLocalizando] = useState(false);
   const sequencia = useRef(0);
 
+  useEffect(() => { import(/* @vite-ignore */ `${import.meta.env.BASE_URL}taste/motion/motion.js`); }, []);
+
   /* Preferências e última previsão salvas ---------------------------------- */
   useEffect(() => {
     setUnidade(lerUnidade());
@@ -241,9 +243,9 @@ export default function App() {
       </header>
 
       <main id="conteudo">
-        <section className="wrap hero">
-          <p className="eyebrow">Seu dia, lá fora</p>
-          <h1>Um olhar para o céu. Um plano para o dia.</h1>
+        <section className="wrap hero" data-enter>
+          <p className="eyebrow">Agora e nos próximos 7 dias</p>
+          <h1>Previsão do tempo nas suas cidades.</h1>
           <p className="hero-lead">
             Veja a temperatura agora e acompanhe as próximas horas. Salve suas cidades para
             planejar a semana com a previsão sempre por perto.
@@ -319,22 +321,20 @@ export default function App() {
               <article>
                 <h3>Dados abertos</h3>
                 <p>
-                  Geocodificação e previsão vêm da Open-Meteo, que é pública e não exige chave. O
-                  navegador conversa direto com a API, sem back-end intermediário.
+                  A previsão e a busca de cidades usam dados da Open-Meteo. A hora da atualização aparece junto da previsão.
                 </p>
               </article>
               <article>
-                <h3>Cache consciente</h3>
+                <h3>Última previsão salva</h3>
                 <p>
                   A última previsão fica salva por 30 minutos. Se a API falhar, o painel mostra o
                   dado salvo com um aviso — nunca finge que é uma leitura ao vivo.
                 </p>
               </article>
               <article>
-                <h3>Acessível por padrão</h3>
+                <h3>Temperatura e horários</h3>
                 <p>
-                  Tabela com cabeçalhos, lista de horários em texto, foco visível, contraste alto e
-                  respeito a <code>prefers-reduced-motion</code>.
+                  Alterne entre Celsius e Fahrenheit. Consulte a variação nas próximas 24 horas e a previsão diária para 7 dias.
                 </p>
               </article>
             </div>

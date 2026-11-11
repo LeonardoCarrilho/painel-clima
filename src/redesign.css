@@ -1,0 +1,64 @@
+:root {
+  --p-bg: #f7f9fa; --p-surface: #ecf0f2; --p-ink: #1f3038; --p-muted: #5d6b72;
+  --p-accent: #0d7480; --p-accent-ink: #ffffff; --p-action: #0d7480; --p-action-ink: #ffffff;
+  --p-inv-bg: #1f3038; --p-inv-surface: #2c3c44; --p-inv-ink: #f7f9fa; --p-inv-muted: #9ea7ab;
+  --p-inv-accent: #f7f9fa; --p-inv-accent-ink: #1f3038; --p-inv-action: #f7f9fa; --p-inv-action-ink: #1f3038;
+  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-text: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.042em;
+  --ly-scale: 0.98;
+}
+
+* { min-width:0; }
+body { background:var(--bg); }
+body::before { display:none; }
+.wrap { width:min(1280px,calc(100% - 96px)); }
+.site-header { position:relative; background:var(--surface,var(--paper)); border-bottom:1px solid var(--line,var(--rule)); }
+.header-inner { min-height:88px; }
+.brand-mark { border-radius:0; box-shadow:none; }
+h1,h2,h3 { font-weight:500; }
+.hero { text-align:left; padding:64px 0 40px; }
+.hero h1 { margin:0; max-width:18ch; font-size:clamp(40px,5.2vw,72px); line-height:1.04; letter-spacing:-.045em; }
+.hero-lead { margin:24px 0 0; max-width:55ch; font-size:18px; line-height:1.6; }
+.hero-meta { justify-content:flex-start; }
+.eyebrow { text-transform:none; letter-spacing:.02em; font-size:14px; }
+.btn,button,input,select { min-height:44px; }
+.btn { border-radius:4px; font-weight:500; }
+.card,.converter,.rate-card,.history-card { box-shadow:none; }
+.section-head h2,.about h2 { font-size:32px; font-weight:500; }
+.about-grid { gap:32px; }
+.about h3 { font-size:20px; }
+.about p { font-size:16px; }
+.site-footer { margin-top:72px; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+@media(max-width:767px) { .wrap { width:calc(100% - 40px); } .header-inner { min-height:76px; } .hero { padding:40px 0 32px; } .hero h1 { font-size:42px; } .hero-lead { font-size:16px; } .section-head h2,.about h2 { font-size:28px; } .about-grid { grid-template-columns:1fr; } .btn { min-height:48px; } }
+@media(max-width:390px) { .wrap { width:calc(100% - 32px); } .hero h1 { font-size:36px; } .header-meta { gap:8px; } }
+
+:root { color-scheme:light; --bg:#f7f9fa; --bg-deep:#ecf0f2; --surface:#fff; --surface-2:#ecf0f2; --ink:#1f3038; --ink-soft:#455b65; --ink-faint:#576a73; --line:#cbd7dc; --line-strong:#9badb6; --forest:#123d46; --forest-2:#174e58; --moss:#0d7480; --moss-soft:#e0f0f1; --accent:#0d7480; --radius:8px; --radius-sm:4px; --display:var(--font-display); --body:var(--font-text); }
+.hero { position:relative; border-bottom:1px solid var(--line); margin-bottom:32px; }
+.hero h1 { max-width:20ch; }
+.hero-lead { max-width:65ch; }
+.brand-mark { background:#0d7480; color:white; }
+.card { border-radius:8px; }
+.search-card { border-radius:8px; background:var(--surface); padding:24px; }
+.current-card { background:#123d46; border:0; box-shadow:none; padding:32px; }
+.current-main { padding-block:36px; }
+.current-card .eyebrow { color:#aed3d9; }
+.temperature { font-size:100px; font-weight:400; letter-spacing:-.07em; }
+.stats { gap:0; border-top:1px solid #ffffff40; }
+.stats>div { background:none; border-radius:0; padding:20px 8px 8px 0; }
+.hourly-card { background:#fff; border:1px solid var(--line); color:var(--ink); padding:32px; }
+.hourly-card .section-head h2,.hourly-card .empty { color:var(--ink); }
+.hourly-card .section-head p { color:var(--ink-soft); }
+.hourly-card .hour-time,.hourly-card .hour-rain { color:var(--ink-soft); }
+.hourly-card .hour-temp,.hourly-card .range { color:var(--moss); }
+.chart-line { stroke:var(--moss); }
+.chart-grid { stroke:var(--line); }
+.chart-dot { fill:var(--moss); stroke:#fff; }
+.about { padding:48px 0; border:0; border-top:1px solid var(--line); border-radius:0; background:none; }
+.forecast-table tbody tr:hover { background:var(--moss-soft); }
+@media(min-width:1100px) { .stack { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; } }
+@media(max-width:767px) { .current-card,.hourly-card,.search-card { padding:22px; } .temperature { font-size:84px; } .stats { grid-template-columns:1fr 1fr; } .header-actions { gap:8px; } }
