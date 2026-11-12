@@ -1,0 +1,867 @@
+{
+  "gate": "GATE: OPEN 35 (rounds used up)",
+  "round": 3,
+  "history": [
+    {
+      "at": "2026-11-12T00:11:38.509Z",
+      "mode": "manual",
+      "status": "fail",
+      "fails": 41,
+      "round": 1,
+      "reused": false,
+      "stopHookActive": false
+    },
+    {
+      "at": "2026-11-12T00:44:56.080Z",
+      "mode": "manual",
+      "status": "fail",
+      "fails": 39,
+      "round": 2,
+      "reused": false,
+      "stopHookActive": false
+    },
+    {
+      "at": "2026-11-12T00:50:29.018Z",
+      "mode": "manual",
+      "status": "open",
+      "fails": 35,
+      "round": 3,
+      "reused": false,
+      "stopHookActive": false
+    }
+  ],
+  "waivers": [
+    {
+      "check": "nav",
+      "target": "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima previsão sem excesso\"",
+      "reason": "This is a single brand link with a name and a category subtitle, not navigation wrapping. Both lines are visible within the header in the final desktop screenshot."
+    }
+  ],
+  "openFails": [
+    {
+      "check": "hero-fill",
+      "where": "main#conteudo > div.wrap.stack > section.card.search-card \"Buscar uma cidade\"",
+      "msg": "the next section shows on the first screen: it starts at 527px on a 900px screen (the hero ends at 495px)",
+      "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "hero-fill"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.card.search-card \"Buscar uma cidade\""
+      ]
+    },
+    {
+      "check": "flush",
+      "where": "main#conteudo > div.wrap.stack > article.card.current-card > p.current-footnote \"Observado às 21h · dados da Open-Meteo\"",
+      "msg": "its last line sits -586px above the rule on top of section.card.hourly-card",
+      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "flush"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > article.card.current-card > p.current-footnote \"Observado às 21h · dados da Open-Meteo\""
+      ]
+    },
+    {
+      "check": "nav",
+      "where": "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima previsão sem excesso\"",
+      "msg": "nav link wraps to a second line",
+      "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "nav"
+      ],
+      "wheres": [
+        "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima previsão sem excesso\""
+      ]
+    },
+    {
+      "check": "no-visual",
+      "where": "main#conteudo > section.wrap.hero \"Previsão do tempo nas suas cidades.\"",
+      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "no-visual"
+      ],
+      "wheres": [
+        "main#conteudo > section.wrap.hero \"Previsão do tempo nas suas cidades.\""
+      ]
+    },
+    {
+      "check": "no-visual",
+      "where": "main#conteudo > div.wrap.stack > section.card.search-card \"Buscar uma cidade\"",
+      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "no-visual"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.card.search-card \"Buscar uma cidade\""
+      ]
+    },
+    {
+      "check": "no-visual",
+      "where": "main#conteudo > div.wrap.stack > section.card.forecast-card \"Próximos 7 dias\"",
+      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "no-visual"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.card.forecast-card \"Próximos 7 dias\""
+      ]
+    },
+    {
+      "check": "text-only",
+      "where": "main#conteudo > div.wrap.stack > section.about \"Como este painel funciona\"",
+      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "text-only"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.about \"Como este painel funciona\""
+      ]
+    },
+    {
+      "check": "cta",
+      "where": "main#conteudo > section.wrap.hero",
+      "msg": "the hero has no button (the nav's does not count)",
+      "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "cta"
+      ],
+      "wheres": [
+        "main#conteudo > section.wrap.hero"
+      ]
+    },
+    {
+      "check": "cta",
+      "where": "main#conteudo > div.wrap.stack > section.about \"Como este painel funciona\"",
+      "msg": "the last section before the footer ends with no button",
+      "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "cta"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.about \"Como este painel funciona\""
+      ]
+    },
+    {
+      "check": "copy-headings",
+      "where": "section.card.search-card > div.favorites > div.favorites-head > h3 \"FAVORITOS\"",
+      "msg": "\"FAVORITOS\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"São Paulo\", \"Como este painel funcion\", \"Dados abertos\", \"Temperatura e horários\")",
+      "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "copy-headings"
+      ],
+      "wheres": [
+        "section.card.search-card > div.favorites > div.favorites-head > h3 \"FAVORITOS\""
+      ]
+    },
+    {
+      "check": "heading-scale",
+      "where": "section.about > div.about-grid > article:nth-of-type(1) > h3 \"Dados abertos\"",
+      "msg": "h3 headings in 2 sizes, 12.5px (\"FAVORITOS\") to 20px (x1.60)",
+      "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "heading-scale"
+      ],
+      "wheres": [
+        "section.about > div.about-grid > article:nth-of-type(1) > h3 \"Dados abertos\""
+      ]
+    },
+    {
+      "check": "heading-scale",
+      "where": "article.card.current-card > div.current-main > div.current-temp > p.temperature \"20°\"",
+      "msg": "the figure \"20°\" is set at 100px, larger than the h1 (72px)",
+      "fix": "set figures below the h1: a stat reads as data, not as the headline",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "heading-scale"
+      ],
+      "wheres": [
+        "article.card.current-card > div.current-main > div.current-temp > p.temperature \"20°\""
+      ]
+    },
+    {
+      "check": "visual-caption",
+      "where": "div.wrap.stack > section.card.hourly-card > figure.chart > figcaption.sr-only \"Gráfico de temperatura das próximas 24 h\"",
+      "msg": "a figcaption under the drawing (svg): \"Gráfico de temperatura das próximas 24 h...\"; no caption or description under any image, render or visual (house rule)",
+      "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "visual-caption"
+      ],
+      "wheres": [
+        "div.wrap.stack > section.card.hourly-card > figure.chart > figcaption.sr-only \"Gráfico de temperatura das próximas 24 h\""
+      ]
+    },
+    {
+      "check": "moment-none",
+      "where": "(the page)",
+      "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+      "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "moment-none"
+      ],
+      "wheres": [
+        "(the page)"
+      ]
+    },
+    {
+      "check": "hero-screen",
+      "where": "main#conteudo > section.wrap.hero \"Agora e nos próximos 7 diasPrevisão do t\"",
+      "msg": "the hero ends at 495px on a 900px screen, 405px above the fold: it ends at the fold, 1px either way (SR-1)",
+      "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "hero-screen"
+      ],
+      "wheres": [
+        "main#conteudo > section.wrap.hero \"Agora e nos próximos 7 diasPrevisão do t\""
+      ]
+    },
+    {
+      "check": "hero-screen",
+      "where": "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\"",
+      "msg": "373px of the next section shows on the first screen (from 527px on a 900px screen): nothing below the hero shows at load (SR-1)",
+      "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "hero-screen"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\""
+      ]
+    },
+    {
+      "check": "section-height",
+      "where": "div#root > footer.site-footer \"Feito por Leonardo Carrilho · React, Vit\"",
+      "msg": "the section is 80px tall (0.1 screens), 820px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+      "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "section-height"
+      ],
+      "wheres": [
+        "div#root > footer.site-footer \"Feito por Leonardo Carrilho · React, Vit\""
+      ]
+    },
+    {
+      "check": "section-height",
+      "where": "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\"",
+      "msg": "the section is 1963px tall (2.2 screens), 163px over two screens (1800px): every section after the hero is one screen or two, 2px either way (SR-2)",
+      "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "section-height"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\"",
+        "main#conteudo > section.wrap.hero \"Agora e nos próximos 7 diasPrevisão do t\""
+      ]
+    },
+    {
+      "check": "section-air",
+      "where": "main#conteudo > div.wrap.stack > section.about \"Como este painel funcionaDados abertosA \"",
+      "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
+      "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "section-air"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > section.about \"Como este painel funcionaDados abertosA \""
+      ]
+    },
+    {
+      "check": "one-section",
+      "where": "main#conteudo > section.wrap.hero > h1 \"Previsão do tempo nas suas cidades.\"",
+      "msg": "the screen at scroll 89px (the top of section 1) shows 406px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "one-section"
+      ],
+      "wheres": [
+        "main#conteudo > section.wrap.hero > h1 \"Previsão do tempo nas suas cidades.\"",
+        "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\"",
+        "main#conteudo > div.wrap.stack > section.card.search-card \"Buscar uma cidadeBusque uma cidade ou us\""
+      ]
+    },
+    {
+      "check": "one-section",
+      "where": "h2#titulo-busca \"Buscar uma cidade\"",
+      "msg": "the screen at scroll 0px (stride 0) shows 373px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "one-section"
+      ],
+      "wheres": [
+        "h2#titulo-busca \"Buscar uma cidade\""
+      ]
+    },
+    {
+      "check": "one-section",
+      "where": "div#root > footer.site-footer \"Feito por Leonardo Carrilho · React, Vit\"",
+      "msg": "the screen at scroll 1742px (the top of section 3) shows 80px of section 3 beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "one-section"
+      ],
+      "wheres": [
+        "div#root > footer.site-footer \"Feito por Leonardo Carrilho · React, Vit\""
+      ]
+    },
+    {
+      "check": "one-heading",
+      "where": "h2#titulo-atual \"São Paulo\"",
+      "msg": "the section holds 5 h2 headings: one per section, first in its .wrap (SR-5)",
+      "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "one-heading"
+      ],
+      "wheres": [
+        "h2#titulo-atual \"São Paulo\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "div#root \"Pular para o conteúdoPainel Climaprevisã\"",
+      "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+      "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "div#root \"Pular para o conteúdoPainel Climaprevisã\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "main#conteudo > section.wrap.hero \"Agora e nos próximos 7 diasPrevisão do t\"",
+      "msg": "the section needs exactly one in-flow child .wrap (it has 4 in-flow children, 0 .wrap) (SR-6)",
+      "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "main#conteudo > section.wrap.hero \"Agora e nos próximos 7 diasPrevisão do t\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\"",
+      "msg": "the section needs exactly one in-flow child .wrap (it has 5 in-flow children, 0 .wrap) (SR-6)",
+      "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack \"Buscar uma cidadeBusque uma cidade ou us\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "h2#titulo-horas \"Próximas 24 horas\"",
+      "msg": "the h2 starts 685px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+      "fix": "start the text on the container's left, or on the one split line every split shares",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "h2#titulo-horas \"Próximas 24 horas\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "h2#titulo-atual \"São Paulo\"",
+      "msg": "the h2 starts 32px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+      "fix": "start the text on the container's left, or on the one split line every split shares",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "h2#titulo-atual \"São Paulo\""
+      ]
+    },
+    {
+      "check": "container-edges",
+      "where": "h2#titulo-sete-dias \"Próximos 7 dias\"",
+      "msg": "the h2 starts 29px right of the container's left: every h1 and h2 starts on it, 2px either way (and 2 more like it: x 105, \"Buscar uma cidade\") (SR-6)",
+      "fix": "start the text on the container's left, or on the one split line every split shares",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "container-edges"
+      ],
+      "wheres": [
+        "h2#titulo-sete-dias \"Próximos 7 dias\""
+      ]
+    },
+    {
+      "check": "row-lines",
+      "where": "div.wrap.stack > section.card.hourly-card > figure.chart > div.hours-scroll \"21h20°0%Nublado22h20°0%Nublado23h19°0%Nu\"",
+      "msg": "a sideways scroller: 1158px of it hidden behind overflow-x: auto (SR-7)",
+      "fix": "show every item inside the container, or stack them: no sideways scroller, no half-cut carousel",
+      "widths": [
+        1440
+      ],
+      "from": "consistency",
+      "ids": [
+        "row-lines"
+      ],
+      "wheres": [
+        "div.wrap.stack > section.card.hourly-card > figure.chart > div.hours-scroll \"21h20°0%Nublado22h20°0%Nublado23h19°0%Nu\""
+      ]
+    },
+    {
+      "check": "no-visual",
+      "where": "main#conteudo > div.wrap.stack > article.card.current-card \"São Paulo\"",
+      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+      "widths": [
+        390
+      ],
+      "from": "consistency",
+      "ids": [
+        "no-visual"
+      ],
+      "wheres": [
+        "main#conteudo > div.wrap.stack > article.card.current-card \"São Paulo\""
+      ]
+    },
+    {
+      "check": "edge-left",
+      "where": "div.wrap.stack h3 \"Temperatura e horários\"",
+      "msg": "starts at x 954.7; the lines are 80 and the column starts",
+      "fix": "start it on the .wrap left line",
+      "widths": [
+        1440
+      ],
+      "from": "layout",
+      "ids": [
+        "edge-left"
+      ],
+      "wheres": [
+        "div.wrap.stack h3 \"Temperatura e horários\""
+      ]
+    },
+    {
+      "check": "edge-left",
+      "where": "div.wrap.stack p \"Alterne entre Celsius e Fahrenhe\"",
+      "msg": "starts at x 954.7; the lines are 80 and the column starts",
+      "fix": "start it on the .wrap left line",
+      "widths": [
+        1440
+      ],
+      "from": "layout",
+      "ids": [
+        "edge-left"
+      ],
+      "wheres": [
+        "div.wrap.stack p \"Alterne entre Celsius e Fahrenhe\""
+      ]
+    },
+    {
+      "check": "edge-left",
+      "where": "footer.site-footer p.muted \"Previsão informativa; não substi\"",
+      "msg": "starts at x 970.9; the lines are 80 and the column starts",
+      "fix": "start it on the .wrap left line",
+      "widths": [
+        1440
+      ],
+      "from": "layout",
+      "ids": [
+        "edge-left"
+      ],
+      "wheres": [
+        "footer.site-footer p.muted \"Previsão informativa; não substi\""
+      ]
+    },
+    {
+      "check": "screen-short",
+      "where": "section.wrap.hero section.wrap.hero \"Agora e nos próximos 7 diasPrevi\"",
+      "msg": "406px tall; one screen under the nav is 900px",
+      "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "layout",
+      "ids": [
+        "screen-short"
+      ],
+      "wheres": [
+        "section.wrap.hero section.wrap.hero \"Agora e nos próximos 7 diasPrevi\""
+      ]
+    },
+    {
+      "check": "hero-fold",
+      "where": "section.wrap.hero section.wrap.hero \"Agora e nos próximos 7 diasPrevi\"",
+      "msg": "starts at y 89, not under the nav",
+      "fix": "the hero fills the first screen alone, its button inside it",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "layout",
+      "ids": [
+        "hero-fold"
+      ],
+      "wheres": [
+        "section.wrap.hero section.wrap.hero \"Agora e nos próximos 7 diasPrevi\""
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "check": "flush",
+      "where": "h2#titulo-busca \"Buscar uma cidade\"",
+      "msg": "its first line sits 23px under the top edge of section.card.search-card, where the ground changes",
+      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "flush",
+      "where": "section.card.search-card > div.favorites > p.empty-inline > strong \"Salvar\"",
+      "msg": "its last line sits 27px above the lower edge of section.card.search-card, where the ground changes to article.card.current-card",
+      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "flush",
+      "where": "h2#titulo-sete-dias \"Próximos 7 dias\"",
+      "msg": "its first line sits 24px under the top edge of section.card.forecast-card, where the ground changes",
+      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "nav",
+      "where": "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima previsão sem excesso\"",
+      "msg": "the nav is lopsided: its first item starts 9px inside the content's edge (80px), while its last ends on the other edge",
+      "fix": "start the nav's first item and end its last on the content's two edges",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "copy-buttons",
+      "where": "header.site-header > div.wrap.header-inner > div.header-actions > button.btn.btn-small \"Atualizar\"",
+      "msg": "\"Atualizar\" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: \"Buscar\", \"Minha localização\")",
+      "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "copy-actions",
+      "where": "(the page)",
+      "msg": "the main action \"Buscar\" does not read word for word the same in the nav or hero and the closing section",
+      "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "off-grid",
+      "where": "h2#titulo-busca \"Buscar uma cidade\"",
+      "msg": "the section's heading starts at 105px, 25px off the page margin (80px), and no other section starts there",
+      "fix": "move it onto the page margin, or the column edge its section uses",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "off-grid",
+      "where": "h2#titulo-atual \"São Paulo\"",
+      "msg": "the section's heading starts at 112px, 32px off the page margin (80px), and no other section starts there",
+      "fix": "move it onto the page margin, or the column edge its section uses",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "off-grid",
+      "where": "h2#titulo-horas \"Próximas 24 horas\"",
+      "msg": "the section's heading starts at 765px, 685px off the page margin (80px), and no other section starts there",
+      "fix": "move it onto the page margin, or the column edge its section uses",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "off-grid",
+      "where": "h2#titulo-sete-dias \"Próximos 7 dias\"",
+      "msg": "the section's heading starts at 109px, 29px off the page margin (80px), and no other section starts there",
+      "fix": "move it onto the page margin, or the column edge its section uses",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "section-gaps",
+      "where": "main#conteudo > div.wrap.stack > article.card.current-card / main#conteudo > div.wrap.stack > section.card.hourly-card",
+      "msg": "the sections overlap by 558px",
+      "fix": "use one gap between sections (all within 25% of each other)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "orphan",
+      "where": "figure.chart > div.hours-scroll > ul.hours > li.hour:nth-of-type(1) \"21h 20° 0% Nublado\"",
+      "msg": "its last line holds only \"0%\" (and 23 more like it: \"22h 20° 0% Nublado\", \"23h 19° 0% Nublado\", \"00h 19° 2% Nublado\", \"01h 18° 2% Nublado\", ...)",
+      "fix": "rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "copy-length",
+      "where": "main#conteudo > div.wrap.stack > section.card.hourly-card \"Próximas 24 horas\"",
+      "msg": "1 section over 90 words a screen outside the UI mocks (\"Próximas 24 horas\" 149); 72 words a screen across the page (431 words in 6 screens): a tech page says it in about 80 or fewer",
+      "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "one-screen",
+      "where": "main#conteudo > div.wrap.stack > article.card.current-card \"São Paulo\"",
+      "msg": "3 sections are shorter than the screen, so the next one's heading or picture shows with them: \"São Paulo\" is 620px of the 900px under the nav, and \"Próximas 24 horas\" shows below it (\"Próximas 24 horas\", \"Próximos 7 dias\")",
+      "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "visual-caption",
+      "where": "div.hours-scroll > ul.hours > li.hour:nth-of-type(1) > span.hour-time \"21h\"",
+      "msg": "a muted 11px line of 1 row sits 26px under the drawing (svg): it reads as a caption: \"21h\"; no caption or description under any image, render or visual (house rule)",
+      "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+      "widths": [
+        1440,
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "skip-link",
+      "where": "div#root > a.skip-link \"Pular para o conteúdo\"",
+      "msg": "the first Tab stop is \"Pular para o conteúdo\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+      "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "share-meta",
+      "where": "head",
+      "msg": "the head lacks og:description, og:image, twitter:card: a shared link shows no picture or title of its own",
+      "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "form-fields",
+      "where": "main#conteudo > div.wrap.stack > section.card.search-card:nth-of-type(1) > form.search-form",
+      "msg": "the form has no status line (role=\"status\"): sending, sent and errors are never read out",
+      "fix": "give each field its type, autocomplete and inputmode, never block paste or disable the button before a submit, and add the status line (references/system.md, Forms)",
+      "widths": [
+        1440
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "flush",
+      "where": "h2#titulo-horas \"Próximas 24 horas\"",
+      "msg": "its first line sits 18px under the top edge of section.card.hourly-card, where the ground changes",
+      "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+      "widths": [
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "nav",
+      "where": "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima\"",
+      "msg": "the nav is lopsided: its first item starts 9px inside the content's edge (16px), while its last ends on the other edge",
+      "fix": "start the nav's first item and end its last on the content's two edges",
+      "widths": [
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "section-gaps",
+      "where": "main#conteudo > div.wrap.stack > section.card.hourly-card / main#conteudo > div.wrap.stack > section.card.forecast-card",
+      "msg": "65px between these sections, -27% against the median 89px",
+      "fix": "use one gap between sections (all within 25% of each other)",
+      "widths": [
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "proximity",
+      "where": "main#conteudo > div.wrap.stack > section.card.hourly-card > figure.chart \"Próximas 24 horas Variação de temperatur\"",
+      "msg": "stacked at this width, the visual starts 20px under the text and buttons above it (\"Próximas 24 horas Variação de \"): it reads glued to them",
+      "fix": "give the stacked split the section's own gap between text and visual (40px or more on a phone)",
+      "widths": [
+        390
+      ],
+      "from": "consistency"
+    },
+    {
+      "check": "label-centre",
+      "where": "section.card.search-card > form.search-form > div.search-row > button.btn.btn-ghost \"Minha localização\"",
+      "msg": "its label sits 18px off-centre (9px of room at the left, 27px at the right)",
+      "fix": "centre the label in its button, or fill the empty side with an icon",
+      "widths": [
+        390
+      ],
+      "from": "consistency"
+    }
+  ]
+}

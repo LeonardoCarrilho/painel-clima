@@ -1,0 +1,7 @@
+[
+  {
+    "check": "nav",
+    "target": "div#root > header.site-header > div.wrap.header-inner > a.brand \"Painel Clima previsão sem excesso\"",
+    "reason": "This is a single brand link with a name and a category subtitle, not navigation wrapping. Both lines are visible within the header in the final desktop screenshot."
+  }
+]

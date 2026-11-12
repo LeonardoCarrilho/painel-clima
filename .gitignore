@@ -31,3 +31,6 @@ public/taste/motion/_hover-test.html
 .taste-skill/*
 !.taste-skill/PLAN.md
 !.taste-skill/REPORT.md
+
+!.taste-skill/findings.json
+!.taste-skill/waivers.json
