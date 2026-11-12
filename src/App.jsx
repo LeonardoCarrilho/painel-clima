@@ -35,7 +35,13 @@ export default function App() {
   const [localizando, setLocalizando] = useState(false);
   const sequencia = useRef(0);
 
-  useEffect(() => { import(/* @vite-ignore */ `${import.meta.env.BASE_URL}taste/motion/motion.js`); }, []);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = import.meta.env.BASE_URL + "taste/motion/motion.js";
+    document.body.append(script);
+    return () => script.remove();
+  }, []);
 
   /* Preferências e última previsão salvas ---------------------------------- */
   useEffect(() => {

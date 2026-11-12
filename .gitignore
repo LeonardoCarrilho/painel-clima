@@ -22,3 +22,12 @@ test-results/
 public/taste/moments/
 public/redesign.css
 public/taste/motion/demo.html
+
+public/taste/motion/_hover-test.html
+public/taste/motion/meta.json
+.taste-skill/unused-moments/
+public/taste/motion/_hover-test.html
+
+.taste-skill/*
+!.taste-skill/PLAN.md
+!.taste-skill/REPORT.md
