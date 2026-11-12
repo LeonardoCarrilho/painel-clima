@@ -1,0 +1,40 @@
+/* Weather field notes: olive ink, warm paper, large observed temperature. */
+:root { --bg:#f2eddf; --bg-deep:#e8e2d1; --surface:#f8f5e9; --surface-2:#eae6d5; --ink:#374332; --ink-soft:#58634d; --ink-faint:#677158; --line:#c5c8b0; --line-strong:#9da987; --forest:#3e5938; --forest-2:#30472b; --moss:#47613b; --moss-soft:#e4e7d1; --sky:#5c7955; --sky-soft:#e3e6cf; --sun:#a5522d; --sun-soft:#f0dfc8; --coral:#9d422d; --radius:0; --display:Georgia,"Times New Roman",serif; --focus-ring:#a5522d; }
+body { background:#f2eddf; }
+.site-header { background:#f2eddf; border-bottom:1px solid #9da987; }
+.brand-mark { background:transparent; border:1px solid #677b58; border-radius:50%; color:#47613b; }
+.hero { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); column-gap:60px; padding-top:42px; padding-bottom:34px; align-items:end; }
+.hero .eyebrow { grid-column:1/-1; font-family:monospace; font-size:.7rem; letter-spacing:.16em; color:#a5522d; }
+.hero h1 { font-family:Georgia,serif; font-weight:400; font-size:clamp(3rem,5.3vw,5rem); letter-spacing:-.055em; line-height:1.02; max-width:19ch; grid-column:1; grid-row:2/4; }
+.hero-lead { grid-column:2; font-size:.95rem; max-width:38ch; margin-top:0; }
+.hero-meta { grid-column:2; font-size:.67rem; padding-top:16px; border-top:1px solid #c5c8b0; }
+.card { background:#f8f5e9; border-radius:0; border:0; border-top:1px solid #9da987; padding:26px; box-shadow:none; }
+.search-card { border:1px solid #9da987; background:transparent; }
+.search-card h2 { font-family:Georgia,serif; font-weight:400; font-size:1.6rem; }
+.search-row input { border:0; border-bottom:1px solid #9da987; border-radius:0; background:#f8f5e9; }
+.btn { border-radius:0; font-family:monospace; font-size:.75rem; }
+.current-card { background:#dce2c5; border:0; color:#374332; box-shadow:none; }
+.current-head h2 { font-family:Georgia,serif; font-size:2.5rem; font-weight:400; }
+.current-head .eyebrow { color:#58634d; }
+.current-place,.current-footnote,.feels,.condition { color:#58634d; }
+.current-main { flex-direction:row-reverse; justify-content:space-between; padding-block:30px; }
+.temperature { color:#374332; font-family:Georgia,serif; font-size:clamp(6rem,9vw,8.5rem); font-weight:400; line-height:1; letter-spacing:-.09em; }
+.current-icon { color:#a5522d; filter:none; }
+.favorite-button { border-color:#81956e; color:#3e5938; background:transparent; border-radius:0; }
+.stats { gap:0; border-block:1px solid #9da987; }
+.stats>div { border:0; border-radius:0; padding:14px 0; background:none; }
+.stats dt { color:#58634d; font-family:monospace; font-size:.65rem; text-transform:uppercase; }
+.stats dd { color:#374332; font-size:.9rem; }
+.current-footnote { margin-top:20px; }
+.hourly-card { background:none; border:0; padding-inline:0; }
+.section-head h2 { font-family:Georgia,serif; font-size:1.9rem; font-weight:400; }
+.chart-svg { height:230px; }
+.forecast-card { padding:26px 0; background:none; }
+.forecast-table thead th { background:#e4e7d1; }
+.forecast-table tbody td,.forecast-table tbody th { border-color:#c5c8b0; }
+.forecast-table tbody tr:hover { background:#e8e9d9; }
+.about { border:0; border-top:2px solid #677b58; background:none; border-radius:0; padding:28px 0; }
+.about h2 { font-family:Georgia,serif; font-weight:400; font-size:2rem; }
+.site-footer { border-top:1px solid #9da987; }
+@media(min-width:1100px) { .stack { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:26px 44px; } }
+@media(max-width:767px) { .hero { display:block; padding-top:30px; } .hero h1 { font-size:clamp(2.9rem,11vw,4.2rem); } .hero-lead { margin-top:24px; max-width:none; } .hero-meta { margin-top:16px; } .card { padding:22px; } .current-head h2 { font-size:2rem; } .temperature { font-size:6rem; } .current-icon { width:78px; } .hourly-card,.forecast-card { padding-inline:0; } .stats { gap:0 16px; } }

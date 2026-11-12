@@ -1,15 +1,24 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-type="software" data-motion data-radius="sharp">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://api.open-meteo.com https://geocoding-api.open-meteo.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painel Clima — previsão atual, 24 horas e 7 dias</title>
     <meta
       name="description"
       content="Painel de clima com temperatura atual, próximas 24 horas, previsão de 7 dias, favoritos e troca entre Celsius e Fahrenheit. Feito com React e Open-Meteo."
     />
-    <meta name="theme-color" content="#123a34" />
+    <meta name="theme-color" content="#f7f9fa" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+      <meta name="page-type" content="software"/>
+    <meta name="site-kind" content="software"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,400..600&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="%BASE_URL%taste/motion/motion.css"/>
+      <meta property="og:type" content="website" />
+    <meta property="og:title" content="Painel Clima — previsão atual, 24 horas e 7 dias" />
+      <script type="module" src="/src/entrance.js"></script>
   </head>
   <body>
     <div id="root"></div>

@@ -21,7 +21,7 @@ export default function SearchBar({
     <section className="card search-card" aria-labelledby="titulo-busca">
       <div className="section-head">
         <div>
-          <h2 id="titulo-busca">Onde você está?</h2>
+          <h2 id="titulo-busca">Buscar uma cidade</h2>
           <p>Busque uma cidade ou use a sua localização atual.</p>
         </div>
       </div>

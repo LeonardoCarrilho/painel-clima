@@ -1,0 +1,77 @@
+:root {
+  --p-bg: #f7f7f5; --p-surface: #ebebe8; --p-ink: #000000; --p-muted: #666662;
+  --p-accent: #d0106f; --p-accent-ink: #ffffff; --p-action: #d0106f; --p-action-ink: #ffffff;
+  --p-inv-bg: #000000; --p-inv-surface: #010101; --p-inv-ink: #f7f7f5; --p-inv-muted: #828280;
+  --p-inv-accent: #d0106f; --p-inv-accent-ink: #ffffff; --p-inv-action: #d0106f; --p-inv-action-ink: #ffffff;
+  --font-display: "Mona Sans", system-ui, sans-serif;
+  --font-text: "Mona Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 500;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --display-stretch: 104%;
+  --ly-scale: 0.96;
+}
+
+* { min-width:0; }
+body { background:var(--bg); }
+body::before { display:none; }
+.wrap { width:min(1280px,calc(100% - 96px)); }
+.site-header { position:relative; background:var(--surface,var(--paper)); border-bottom:1px solid var(--line,var(--rule)); }
+.header-inner { min-height:88px; }
+.brand-mark { border-radius:0; box-shadow:none; }
+h1,h2,h3 { font-weight:500; }
+.hero { text-align:left; padding:64px 0 40px; }
+.hero h1 { margin:0; max-width:18ch; font-size:clamp(40px,5.2vw,72px); line-height:1.04; letter-spacing:-.045em; }
+.hero-lead { margin:24px 0 0; max-width:55ch; font-size:18px; line-height:1.6; }
+.hero-meta { justify-content:flex-start; }
+.eyebrow { text-transform:none; letter-spacing:.02em; font-size:14px; }
+.btn,button,input,select { min-height:44px; }
+.btn { border-radius:4px; font-weight:500; }
+.card,.converter,.rate-card,.history-card { box-shadow:none; }
+.section-head h2,.about h2 { font-size:32px; font-weight:500; }
+.about-grid { gap:32px; }
+.about h3 { font-size:20px; }
+.about p { font-size:16px; }
+.site-footer { margin-top:72px; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+@media(max-width:767px) { .wrap { width:calc(100% - 40px); } .header-inner { min-height:76px; } .hero { padding:40px 0 32px; } .hero h1 { font-size:42px; } .hero-lead { font-size:16px; } .section-head h2,.about h2 { font-size:28px; } .about-grid { grid-template-columns:1fr; } .btn { min-height:48px; } }
+@media(max-width:390px) { .wrap { width:calc(100% - 32px); } .hero h1 { font-size:36px; } .header-meta { gap:8px; } }
+
+:root { color-scheme:light; --bg:#f7f7f5; --bg-deep:#ebebe8; --surface:#fff; --surface-2:#ebebe8; --ink:#202322; --ink-soft:#4c504e; --ink-faint:#646864; --line:#d6d8d3; --line-strong:#a7aba5; --forest:#232723; --forest-2:#333b34; --moss:#b80b60; --moss-soft:#fae9f1; --accent:#b80b60; --radius:8px; --radius-sm:4px; --display:var(--font-display); --body:var(--font-text); }
+.hero { position:relative; border-bottom:1px solid var(--line); margin-bottom:32px; }
+.hero h1 { max-width:20ch; }
+.hero-lead { max-width:65ch; }
+.brand-mark { background:#b80b60; color:white; }
+.card { border-radius:8px; }
+.search-card { border-radius:8px; background:var(--surface); padding:24px; }
+.current-card { background:#232723; border:0; box-shadow:none; padding:32px; }
+.current-main { padding-block:36px; }
+.current-card .eyebrow { color:#d9e4d7; }
+.temperature { font-size:100px; font-weight:400; letter-spacing:-.07em; }
+.stats { gap:0; border-top:1px solid #ffffff40; }
+.stats>div { background:none; border-radius:0; padding:20px 8px 8px 0; }
+.hourly-card { background:#fff; border:1px solid var(--line); color:var(--ink); padding:32px; }
+.hourly-card .section-head h2,.hourly-card .empty { color:var(--ink); }
+.hourly-card .section-head p { color:var(--ink-soft); }
+.hourly-card .hour-time,.hourly-card .hour-rain { color:var(--ink-soft); }
+.hourly-card .hour-temp,.hourly-card .range { color:var(--moss); }
+.chart-line { stroke:var(--moss); }
+.chart-grid { stroke:var(--line); }
+.chart-dot { fill:var(--moss); stroke:#fff; }
+.about { padding:48px 0; border:0; border-top:1px solid var(--line); border-radius:0; background:none; }
+.forecast-table tbody tr:hover { background:var(--moss-soft); }
+@media(min-width:1100px) { .stack { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; } }
+@media(max-width:767px) { .current-card,.hourly-card,.search-card { padding:22px; } .temperature { font-size:84px; } .stats { grid-template-columns:1fr 1fr; } .header-actions { gap:8px; } }
+.hero h1 { font-weight:500; }
+.current-card .stats > div { padding:16px; }
+.brand { min-height:44px; }
+.empty-inline { color:#4c504e; }
+.favorite-button:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+.table-wrap:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
+.site-footer a:focus-visible { background:#fff; outline:3px solid var(--ink); outline-offset:3px; }
+:focus-visible { scroll-margin-block:32px; }
+
+/* Keyboard navigation must reveal the focused control immediately. */
+html:focus-within { scroll-behavior:auto; }
+.hours-scroll:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
