@@ -16,7 +16,7 @@ A composição preserva a ferramenta operacional, os campos e os resultados reai
 
 ## Gate e limites
 
-Todos os 36 FAILs abertos, 23 WARNs e suas localizações estão no [registro integral](findings.json). A validação não é PASS. As exigências de seções fullscreen, CTA promocional por seção, fotografia/mockup e momentos de demonstração são incompatíveis com a manutenção destas ferramentas. Elas continuam abertas, sem isenções genéricas. Alinhamentos sinalizados em painéis, subtítulos e tabelas foram confrontados com as capturas. Rolagem horizontal interna do clima é intencional e acessível por teclado, sem overflow de página nos testes de CI.
+O [registro integral](findings.json) contém 36 achados FAIL antes das isenções: 1 receberam isenções específicas e 35 permanecem efetivamente abertos, conforme a linha GATE acima. Também registra 23 WARNs e suas localizações. O campo histórico openFails do JSON inclui os achados isentados; a contagem efetiva é a da linha GATE. A validação não é PASS. As exigências de seções fullscreen, CTA promocional por seção, fotografia/mockup e momentos de demonstração são incompatíveis com a manutenção destas ferramentas. Elas continuam abertas, sem isenções genéricas. Alinhamentos sinalizados em painéis, subtítulos e tabelas foram confrontados com as capturas. Rolagem horizontal interna do clima é intencional e acessível por teclado, sem overflow de página nos testes de CI.
 
 Achados finais de foco, contraste, toque, colisão, overflow de página e entrada: nenhum FAIL dessas classes no gate final.
 
